@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Hieu</title>
+    <title>Register - Hieu</title>
     <link rel="stylesheet" href="/css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,31 +31,28 @@
     <div class="login-container">
         <div class="login-header">
             <img src="https://cdn.jsdelivr.net/gh/anwen-anyi/imgAnwen/images/OuNiJiang.gif" alt="Logo" class="logo">
-           
-            <h1>⭐ Login to the Hiu ⭐</h1>
+            
+            <h1>⭐ Register to the Hiu ⭐</h1>
         </div>
         <form class="login-form">
             <div class="input-group">
-                <input type="text" id="username" name="username" placeholder="Nhập tài khoản vàoo" required="Nhập tài khoản vào đii!">
+                <input type="text" id="username" name="username" placeholder="Nhập tài khoản vào" required>
             </div>
             <div class="input-group">
-                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu vàoo" required="Ơ? Không nhập mật khẩu à?">
+                <input type="email" id="email" name="email" placeholder="Nhập email vào" required>
             </div>
-            <div class="checkbox-group">
-                <input type="checkbox" id="remember-me" name="remember-me" checked>
-                <label for="remember-me">Remember me</label>
-                <a href="#" class="forgot-password">Forgot password?</a>
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu vào" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Xác nhận mật khẩu" required>
             </div>
             
             <div class="button-container">
-                <button type="submit" class="login-btn">Login</button>
-                <button type="button" class="clear-btn" onclick="window.location.href='/Register.html'">Register</button>
-               
-                <!-- <a href="Register.html">
-                      <button type="button" class="clear-btn" >Register</button>
-                    </a> -->
+                <button type="submit" class="login-btn">Register</button>
+                <button type="button" class="clear-btn">Clear</button>
             </div>
-            <a href="#" class="guest-link">Browse as a guest</a>
+            <a href="login.html" class="guest-link">Already have an account? Login here</a>
         </form>
         <div class="footer-icons">
             <button class="iconweb" onclick="window.location.href='/index.html'">🌐</button>

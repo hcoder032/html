@@ -54,13 +54,13 @@ function drawLightning(x, y, lineWidth, color, outerColor) {
 
 setInterval(createLightning, Math.random() * 4000 + 1000); 
 
-// let heartCount = 0;
+let heartCount = 0;
 
-// document.addEventListener('click', function(e) {
-//     if (!e.target.closest('#heart-count')) {
-//         createHeart(e.pageX, e.pageY);
-//     }
-// });
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('#heart-count')) {
+        createHeart(e.pageX, e.pageY);
+    }
+});
 
 function createHeart(x, y) {
     const heart = document.createElement('div');
@@ -76,14 +76,14 @@ function createHeart(x, y) {
         heart.remove();
     }, 10000); // Thời gian của hiệu ứng float là 1.5s
 
-    // heartCount++;
-    // document.getElementById('heart-count').textContent = `Click nhé <3: ${heartCount}`;
+    heartCount++;
+    document.getElementById('heart-count').textContent = `Click nhé <3: ${heartCount}`;
 
-    // setTimeout(() => {
-    //     heart.remove();
-    // }, 1500); 
+    setTimeout(() => {
+        heart.remove();
+    }, 1500); 
 
-    // if (heartCount >= 10) {
-    //     window.location.href = "login.html"; 
-    // }
+    if (heartCount >= 10) {
+        window.location.href = "login.html"; 
+    }
 }

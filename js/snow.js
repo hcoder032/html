@@ -28,9 +28,9 @@ canvas.height = window.innerHeight;
 
 function createLightning() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-     const lightningCount = Math.floor(Math.random() * 3) + 1; // Random từ 1 đến 3 tia sét 
-     for (let i = 0; i < lightningCount; i++) { const startX = Math.random() * canvas.width; drawLightning(startX, 0, 20, '#FFD700', '#FFA500'); // Màu vàng và viền màu cam
-         } setTimeout(() => { ctx.clearRect(0, 0, canvas.width, canvas.height); }, 100); // Sét xuất hiện trong thời gian ngắn 
+     const lightningCount = Math.floor(Math.random() * 3) + 1; 
+     for (let i = 0; i < lightningCount; i++) { const startX = Math.random() * canvas.width; drawLightning(startX, 0, 20, '#FFD700', '#FFA500'); 
+         } setTimeout(() => { ctx.clearRect(0, 0, canvas.width, canvas.height); }, 100); 
          }
 
 
@@ -49,4 +49,4 @@ function drawLightning(x, y, lineWidth, color, outerColor) {
     ctx.stroke();
 }
 
-setInterval(createLightning, Math.random() * 4000 + 1000); // Tạo sét ngẫu nhiên
+setInterval(createLightning, Math.random() * 4000 + 1000);

@@ -9,7 +9,7 @@ body, html {
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow: hidden; /* Ngăn chặn cuộn trang */
+    overflow: hidden; 
 }
 
 /* Container Snow */
@@ -20,11 +20,11 @@ body, html {
     border: 2px solid #fff;
     border-radius: 30px;
     background: rgba(255, 218, 185, 0.5);
-    width: 90%; /* Sử dụng phần trăm để linh hoạt chiều rộng */
-    max-width: 800px; /* Đặt giới hạn chiều rộng tối đa */
+    width: 90%; 
+    max-width: 800px; 
     height: auto;
     margin: 0 20px;
-    overflow: hidden; /* Ngăn chặn các phần tử bên trong mở rộng container */
+    overflow: hidden; 
 }
 
 .hope-image {
@@ -32,19 +32,6 @@ body, html {
     max-height: 100%;
 }
 
-/* Heart count style */
-#heart-count {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    font-size: 1.5em;
-    z-index: 1000;
-    white-space: nowrap; /* Ngăn không cho text xuống dòng và mở rộng layout */
-    pointer-events: none; /* Ngăn chặn sự kiện click ảnh hưởng đến #heart-count */
-}
 
 /* Icon loading */
 #loading-icon {
@@ -73,50 +60,50 @@ body, html {
 /* Media Queries for responsive design */
 @media only screen and (max-width: 1024px) {
     .snow-container {
-        width: 90%; /* Chiều rộng linh hoạt cho màn hình lớn hơn */
+        width: 90%; 
     }
 
-    /* #heart-count {
+    #heart-count {
         font-size: 0.9em; 
         top: 20px; 
         right: 20px;
-    } */
+    }
 
     #loading-icon {
-        width: 45px; /* Kích thước nhỏ hơn cho icon */
+        width: 45px;
         height: 45px;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .snow-container {
-        width: 90%; /* Chiều rộng linh hoạt cho màn hình nhỏ hơn */
+        width: 90%; 
     }
 
-    /* #heart-count {
+    #heart-count {
         font-size: 0.8em; 
         top: 20px; 
         right: 20px;
-    } */
+    }
 
     #loading-icon {
-        width: 40px; /* Kích thước nhỏ hơn cho icon */
+        width: 40px;
         height: 40px;
     }
 }
 
 @media only screen and (max-width: 480px) {
     .snow-container {
-        width: 95%; /* Chiều rộng linh hoạt cho màn hình nhỏ hơn */
+        width: 95%; 
     }
 
-    /* #heart-count {
+    #heart-count {
         font-size: 0.7em; 
         padding: 5px;  
-    } */
+    }
 
     #loading-icon {
-        width: 30px; /* Kích thước nhỏ hơn cho icon */
+        width: 30px; 
         height: 30px;
     }
 }
@@ -128,7 +115,12 @@ body, html {
     height: 20px;
     background: url('https://png.pngtree.com/png-vector/20220428/ourmid/pngtree-smooth-glossy-heart-vector-file-ai-and-png-png-image_4557871.png') no-repeat center center/contain;
     animation: float 1.5s ease-out forwards;
-    pointer-events: none; /* Ngăn chặn sự kiện click ảnh hưởng đến các trái tim */
+    pointer-events: none; 
+}
+#heart-count
+{
+    background-color: #ccc;
+    color: #ff7f50;
 }
 
 @keyframes float {
