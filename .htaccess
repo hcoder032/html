@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Nếu thư mục hoặc file thật tồn tại, không thay đổi URL
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Nếu không, thêm đuôi .html vào URL và thực hiện lại yêu cầu
+RewriteRule ^([^/]+)$ $1.html [L,QSA]

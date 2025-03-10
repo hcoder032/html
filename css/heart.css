@@ -1,0 +1,58 @@
+#heart-count {
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   padding: 10px;
+   background-color: rgba(0, 0, 0, 0.5);
+   border-radius: 10px;
+   font-size: 1.5em;
+   z-index: 1000;
+   white-space: nowrap; /* Ngăn không cho text xuống dòng và mở rộng layout */
+   pointer-events: none; /* Ngăn chặn sự kiện click ảnh hưởng đến #heart-count */
+}
+.heart {
+     position: absolute; 
+     width: 20px; 
+     height: 20px; 
+     background: url('https://png.pngtree.com/png-vector/20220428/ourmid/pngtree-smooth-glossy-heart-vector-file-ai-and-png-png-image_4557871.png') no-repeat center center/contain; 
+     animation: float 1.5s ease-out forwards;
+}
+   @keyframes float 
+   { 0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        } 
+        100% 
+        { transform: translateY(-100px) rotate(0deg);
+          opacity: 0; 
+       } 
+   }
+
+   @media only screen and (max-width: 480px) {
+      #heart-count {
+          font-size: 0.7em; /* Điều chỉnh kích thước font */
+          padding: 5px;  /* Giảm padding để phù hợp trên thiết bị di động */
+      }
+  }
+
+
+    @media only screen and (max-width: 768px) {
+      #heart-count {
+          font-size: 0.8em; /* Điều chỉnh kích thước font */
+          top: 20px; /* Điều chỉnh vị trí trên màn hình nhỏ hơn */
+          right: 20px;
+      }
+
+   }
+   @media only screen and (max-width: 1024px) {
+     
+  
+      #heart-count {
+          font-size: 0.9em; /* Điều chỉnh kích thước font */
+          top: 20px; /* Điều chỉnh vị trí trên màn hình nhỏ hơn */
+          right: 20px;
+      }
+ 
+  }
+
+  

@@ -1,0 +1,189 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(to bottom, rgb(225, 64, 180), rgb(126, 43, 237));
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Ngăn chặn cuộn trang */
+}
+
+/* Container Snow */
+.snow-container {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    background: rgba(255, 218, 185, 0.5);
+    width: 90%; /* Sử dụng phần trăm để linh hoạt chiều rộng */
+    max-width: 800px; /* Đặt giới hạn chiều rộng tối đa */
+    height: auto;
+    margin: 0 20px;
+    overflow: hidden; /* Ngăn chặn các phần tử bên trong mở rộng container */
+}
+
+.hope-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Heart count style */
+#heart-count {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    font-size: 1.5em;
+    z-index: 1000;
+    white-space: nowrap; /* Ngăn không cho text xuống dòng và mở rộng layout */
+    pointer-events: none; /* Ngăn chặn sự kiện click ảnh hưởng đến #heart-count */
+}
+
+/* Icon loading */
+#loading-icon {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    border-top-color: #ccc;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media Queries for responsive design */
+@media only screen and (max-width: 1024px) {
+    .snow-container {
+        width: 90%; /* Chiều rộng linh hoạt cho màn hình lớn hơn */
+    }
+
+    /* #heart-count {
+        font-size: 0.9em; 
+        top: 20px; 
+        right: 20px;
+    } */
+
+    #loading-icon {
+        width: 45px; /* Kích thước nhỏ hơn cho icon */
+        height: 45px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .snow-container {
+        width: 90%; /* Chiều rộng linh hoạt cho màn hình nhỏ hơn */
+    }
+
+    /* #heart-count {
+        font-size: 0.8em; 
+        top: 20px; 
+        right: 20px;
+    } */
+
+    #loading-icon {
+        width: 40px; /* Kích thước nhỏ hơn cho icon */
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .snow-container {
+        width: 95%; /* Chiều rộng linh hoạt cho màn hình nhỏ hơn */
+    }
+
+    /* #heart-count {
+        font-size: 0.7em; 
+        padding: 5px;  
+    } */
+
+    #loading-icon {
+        width: 30px; /* Kích thước nhỏ hơn cho icon */
+        height: 30px;
+    }
+}
+
+/* Heart animation */
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('https://png.pngtree.com/png-vector/20220428/ourmid/pngtree-smooth-glossy-heart-vector-file-ai-and-png-png-image_4557871.png') no-repeat center center/contain;
+    animation: float 1.5s ease-out forwards;
+    pointer-events: none; /* Ngăn chặn sự kiện click ảnh hưởng đến các trái tim */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0;
+    }
+}
+
+/* Additional styles */
+h1 {
+    font-size: 4em;
+    margin: 0;
+    color: #ffdd57;
+    text-shadow: 0 0 10px #ff7f50, 0 0 20px #ff7f50, 0 0 30px #ff7f50;
+}
+
+p {
+    font-size: 1.5em;
+    margin: 10px 0 0;
+    color: #ffc107;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10%;
+    color: pink;
+    font-size: 1em;
+    opacity: 0.9;
+    pointer-events: none;
+    animation: fall infinite linear;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+.snow-accumulation {
+    position: absolute;
+    color: pink;
+    font-size: 0.8em;
+    pointer-events: none;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}

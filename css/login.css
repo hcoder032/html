@@ -1,0 +1,239 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, rgb(225, 64, 180), rgb(126, 43, 237));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ngăn chặn cuộn trang */
+}
+body.dark-mode html.dark-mode { 
+    background: #151718;; 
+    color: #fff; }
+
+.login-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+body.dark-mode .login-container {
+     background-color: #333; 
+     color: #fff; }
+
+.login-header {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.login-header h1 {
+    color:coral;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+    
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+body.dark-mode .input-group input { 
+    border: 1px solid #555; 
+    background: #202425; 
+    color: #fff; }
+
+.checkbox-group {
+    text-align: left;
+    margin-bottom: 17px;
+    color: #7e868c;
+    
+}
+body.dark-mode .checkbox-group {
+     color: #787f85; }
+
+.checkbox-group input {
+    margin-right: 5px;
+}
+
+.forgot-password {
+    font-size: 0.9em;
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 45px;
+
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+body.dark-mode .forgot-password { 
+    color: #787f85;; 
+} 
+body.dark-mode .forgot-password:hover { 
+    color: #fff;; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    flex: 1;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+.tranf{
+    text-decoration: none;
+}
+
+.clear-btn {
+    background-color: rgb(216, 243, 246);
+  
+}
+
+.login-btn {
+    background-color: rgb(225, 240, 255);
+    color: rgb(0, 106, 220);
+    margin-right: 8px;
+}
+
+body.dark-mode .login-btn { 
+    background-color: rgb(225, 240, 255);
+    color: #000000; }
+
+.guest-link {
+    display: block;
+    padding: 10px 0;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: rgb(87, 70, 175);
+    text-decoration: none;
+    background-color:rgb(237, 233, 254);
+    border-radius: 5px;
+    
+}
+
+.guest-link:hover {
+    text-decoration: underline;
+    
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.iconweb, .iconmoon {
+    background: none; /* Không có background */
+    border: none; /* Không có border */
+    cursor: pointer; /* Hiển thị con trỏ khi hover */
+    font-size: 1.5em; /* Kích thước icon */
+    margin: 0 10px; /* Khoảng cách giữa các icon */
+    padding: 10px; /* Khoảng cách bên trong */
+    outline: none; /* Loại bỏ khung viền xanh */
+    -webkit-tap-highlight-color: transparent; /* Loại bỏ khung viền xanh trên thiết bị di động */
+    transition: background-color 0.3s ease, border-radius 0.3s ease; /* Hiệu ứng chuyển màu và bo tròn khi hover */
+    border-radius: 50%; /* Bo tròn icon */
+}
+
+.iconweb:hover, .iconmoon:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Hiệu ứng nền khi hover */
+    border-radius: 50%; /* Giữ viền tròn khi hover */
+}
+
+.footer-icons button:focus {
+    outline: none; /* Loại bỏ khung viền khi focus */
+}
+
+
+
+
+/* Heart animation */
+/* checl */
+.heart {
+    position: absolute; 
+    width: 20px; 
+    height: 20px; 
+    background: url('https://png.pngtree.com/png-vector/20220428/ourmid/pngtree-smooth-glossy-heart-vector-file-ai-and-png-png-image_4557871.png') no-repeat center center/contain; 
+    animation: float 1.5s ease-out forwards;
+}
+  @keyframes float 
+  { 0% {
+       transform: translateY(0) rotate(0deg);
+       opacity: 1;
+       } 
+       100% 
+       { transform: translateY(-100px) rotate(0deg);
+         opacity: 0; 
+      } 
+  }
+
+
+.snowflake {
+    position: absolute;
+    top: -10%;
+    color: pink;
+    font-size: 1em;
+    opacity: 0.9;
+    pointer-events: none;
+    animation: fall infinite linear;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+.snow-accumulation {
+    position: absolute;
+    color: pink;
+    font-size: 0.8em;
+    pointer-events: none;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Heart animation */
+
