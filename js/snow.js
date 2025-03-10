@@ -6,11 +6,11 @@ function createSnowflake() {
     snowflake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
     document.body.appendChild(snowflake);
 
-    const size = Math.random() * 20 + 10; // Kích thước lớn hơn
+    const size = Math.random() * 20 + 10;
     snowflake.style.fontSize = `${size}px`;
 
     snowflake.style.left = `${Math.random() * window.innerWidth}px`;
-    snowflake.style.animationDuration = `${Math.random() * 7 + 7}s`; // Tốc độ rơi lững thững
+    snowflake.style.animationDuration = `${Math.random() * 7 + 7}s`;
 
     setTimeout(() => {
         snowflake.remove();
@@ -19,7 +19,6 @@ function createSnowflake() {
 
 setInterval(createSnowflake, 200);
 
-// Thêm hiệu ứng sét
 const canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
 const ctx = canvas.getContext('2d');
@@ -28,11 +27,15 @@ canvas.height = window.innerHeight;
 
 function createLightning() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-     const lightningCount = Math.floor(Math.random() * 3) + 1; 
-     for (let i = 0; i < lightningCount; i++) { const startX = Math.random() * canvas.width; drawLightning(startX, 0, 20, '#FFD700', '#FFA500'); 
-         } setTimeout(() => { ctx.clearRect(0, 0, canvas.width, canvas.height); }, 100); 
-         }
-
+    const lightningCount = Math.floor(Math.random() * 3) + 1;
+    for (let i = 0; i < lightningCount; i++) {
+        const startX = Math.random() * canvas.width;
+        drawLightning(startX, 0, 20, '#FFD700', '#FFA500');
+    }
+    setTimeout(() => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }, 100);
+}
 
 function drawLightning(x, y, lineWidth, color, outerColor) {
     ctx.lineWidth = lineWidth;

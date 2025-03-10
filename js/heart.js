@@ -18,13 +18,6 @@ function createHeart(x, y) {
     heartCount++;
     const heartCountElement = document.getElementById('heart-count');
     heartCountElement.textContent = `Click nhé <3:${heartCount}`;
-    
-    heartCountElement.style.position = 'fixed';
-    heartCountElement.style.top = '10px';
-    heartCountElement.style.left = '10px';
-    heartCountElement.style.backgroundColor = 'white';
-    heartCountElement.style.padding = '5px';
-    heartCountElement.style.borderRadius = '5px';
 
     setTimeout(() => {
         heart.remove();

@@ -74,7 +74,7 @@ function createHeart(x, y) {
     document.body.appendChild(heart);
     setTimeout(() => {
         heart.remove();
-    }, 10000); // Thời gian của hiệu ứng float là 1.5s
+    }, 10000); 
 
     heartCount++;
     document.getElementById('heart-count').textContent = `Click nhé <3: ${heartCount}`;

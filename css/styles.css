@@ -32,7 +32,6 @@ body, html {
     max-height: 100%;
 }
 
-
 /* Icon loading */
 #loading-icon {
     display: none;
@@ -117,10 +116,16 @@ body, html {
     animation: float 1.5s ease-out forwards;
     pointer-events: none; 
 }
-#heart-count
-{
-    background-color: #ccc;
+
+#heart-count {
+    background-color: white;
     color: #ff7f50;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1000;
 }
 
 @keyframes float {
